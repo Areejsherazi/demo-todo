@@ -51,7 +51,7 @@ export class TodosService {
     }
 
     async seedRandomTodosForUser(userId: string, count = 10) {
-  const todos: Partial<Todo>[] = [];   // 👈 yahan type specify karo
+  const todos: Partial<Todo>[] = [];   
 
   for (let i = 0; i < count; i++) {
     const isComplete = Math.random() > 0.5; // 50% chance

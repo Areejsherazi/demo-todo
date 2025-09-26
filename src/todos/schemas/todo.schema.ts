@@ -28,7 +28,6 @@ export class Todo {
 
 export const TodoSchema = SchemaFactory.createForClass(Todo);
 
-// middleware: set completedAt when status becomes complete
 TodoSchema.pre('save', function(next) {
   if (this.isModified('status') && this.status === 'complete' && !this.completedAt) {
     this.completedAt = new Date();
